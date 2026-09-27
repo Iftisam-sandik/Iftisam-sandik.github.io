@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ifti Sam Ibn Rahman, Server Administrator and Junior DevOps / Cloud Engineer, with hands-on AWS, Linux, Terraform, CI/CD, containers and observability projects.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Ifti Sam Ibn Rahman | Junior DevOps &amp; Cloud Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .glass {
+            background: rgba(255, 255, 255, 0.035);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+        }
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #818cf8, #22d3ee);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .section-number {
+            color: #6366f1;
+            font-family: 'Fira Code', monospace;
+        }
+        .terminal-dot { width: 10px; height: 10px; border-radius: 999px; }
+        .skill-card:hover, .project-card:hover, .focus-card:hover {
+            transform: translateY(-4px);
+        }
+        .skill-card, .project-card, .focus-card {
+            transition: transform .25s ease, border-color .25s ease, background-color .25s ease;
+        }
+
+        .architecture-node {
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(129, 140, 248, 0.24);
+            border-radius: 14px;
+            padding: 14px 16px;
+            text-align: center;
+            min-width: 132px;
+        }
+        .architecture-arrow {
+            color: #64748b;
+            font-size: 1rem;
+            flex: 0 0 auto;
+        }
+        .evidence-grid-card {
+            background: rgba(15, 23, 42, 0.46);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        details.production-evidence > summary {
+            list-style: none;
+        }
+        details.production-evidence > summary::-webkit-details-marker {
+            display: none;
+        }
+        details.production-evidence[open] .evidence-chevron {
+            transform: rotate(180deg);
+        }
+        .evidence-chevron {
+            transition: transform .2s ease;
+        }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-300 antialiased selection:bg-indigo-500/30 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-x-0 border-t-0">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-white font-bold text-lg md:text-xl code-font" aria-label="Ifti Sam Ibn Rahman - home">
+                ~/iftisam<span class="text-indigo-400">.devops</span>
+            </a>
+
+            <div class="space-x-7 hidden md:flex items-center text-sm font-medium tracking-wide">
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+                <a href="#production" class="hover:text-indigo-400 transition">Mindset</a>
+                <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition">Contact</a>
+            </div>
+
+            <a href="#contact" class="md:hidden text-sm px-4 py-2 bg-indigo-600 text-white rounded-lg">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="relative pt-36 pb-24 px-6 overflow-hidden grid-bg">
+        <div class="absolute inset-0 bg-gradient-to-b from-indigo-500/5 via-transparent to-[#0f172a]"></div>
+        <div class="relative max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 mb-7 text-xs font-semibold tracking-wider text-indigo-300 uppercase bg-indigo-400/10 rounded-full border border-indigo-400/20">
+                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                AWS • LINUX • DEVOPS • OBSERVABILITY
+            </div>
+
+            <p class="code-font text-cyan-400 text-sm md:text-base mb-5">Server Administrator • Junior DevOps / Cloud Engineer</p>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-7 tracking-tight leading-tight">
+                Building <span class="gradient-text">Reliable</span><br class="hidden md:block"> Cloud Systems.
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Computer Science graduate and Server Administrator working with Linux and monitoring. My DevOps projects cover AWS, Terraform, CI/CD and containers, with a focus on repeatable automation and troubleshooting.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-14">
+                <a href="#projects" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition">
+                    <i class="fa-solid fa-layer-group mr-2"></i> View Projects
+                </a>
+                <a href="https://github.com/Iftisam-sandik" target="_blank" rel="noopener noreferrer" class="px-8 py-4 glass text-white font-bold rounded-xl hover:bg-white/5 transition">
+                    <i class="fa-brands fa-github mr-2"></i> GitHub
+                </a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="px-8 py-4 glass text-white font-bold rounded-xl hover:bg-white/5 transition" aria-label="Open Ifti Sam Ibn Rahman’s resume PDF">
+                    <i class="fa-solid fa-file-arrow-down mr-2"></i> Resume
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-2xl font-bold text-white">AWS</p>
+                    <p class="text-xs text-slate-500 mt-1">Cloud Infrastructure</p>
+                </div>
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-2xl font-bold text-white">IaC</p>
+                    <p class="text-xs text-slate-500 mt-1">Terraform &amp; Automation</p>
+                </div>
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-lg font-bold text-white">CI/CD</p>
+                    <p class="text-xs text-slate-500 mt-1">Automated Delivery Workflows</p>
+                </div>
+                <div class="glass rounded-2xl p-5">
+                    <p class="text-lg font-bold text-white">Observe</p>
+                    <p class="text-xs text-slate-500 mt-1">Metrics, Logs &amp; Alerts</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-start">
+                <div>
+                    <div class="flex items-center gap-4 mb-7">
+                        <span class="section-number text-xl">01.</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
+                    </div>
+
+                    <h3 class="text-2xl md:text-3xl font-semibold text-white leading-snug mb-6">
+                        Linux administration, with a focus on <span class="gradient-text">automation and visibility.</span>
+                    </h3>
+
+                    <p class="text-slate-400 leading-8 mb-6">
+                        I’m Ifti Sam Ibn Rahman, a Server Administrator at Suffix IT (May 2026–Present). I monitor production and test servers, check CPU, memory and service health, and maintain Prometheus/Grafana dashboards with team-based access.
+                    </p>
+                    <p class="text-slate-400 leading-8">
+                        My personal projects apply AWS, Terraform, Ansible, containers and CI/CD to repeatable deployments and troubleshooting. I hold a B.Sc. in Computer Science and Engineering from Ahsanullah University of Science and Technology (2018–2024).
+                    </p>
+                </div>
+
+                <div class="glass rounded-3xl overflow-hidden">
+                    <div class="flex items-center gap-2 px-5 py-4 border-b border-white/10 bg-slate-950/30">
+                        <span class="terminal-dot bg-red-400"></span>
+                        <span class="terminal-dot bg-amber-400"></span>
+                        <span class="terminal-dot bg-emerald-400"></span>
+                        <span class="ml-3 code-font text-xs text-slate-500">systems-and-devops.sh</span>
+                    </div>
+                    <div class="p-6 md:p-8 code-font text-sm leading-8">
+                        <p><span class="text-indigo-400">$</span> administer systems</p>
+                        <p class="text-slate-500">→ Linux health, services and performance</p>
+                        <p><span class="text-indigo-400">$</span> automate infrastructure</p>
+                        <p class="text-slate-500">→ Terraform, Ansible and configuration</p>
+                        <p><span class="text-indigo-400">$</span> build delivery workflows</p>
+                        <p class="text-slate-500">→ Git, Jenkins and AWS CI/CD</p>
+                        <p><span class="text-indigo-400">$</span> improve visibility</p>
+                        <p class="text-slate-500">→ Prometheus, Grafana, Loki and alerts</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+                <div class="focus-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-server text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Server Administration</h3>
+                    <p class="text-sm text-slate-500">Linux systems, service health, CPU/memory checks and troubleshooting.</p>
+                </div>
+                <div class="focus-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-server text-indigo-400 text-2xl mb-4" aria-hidden="true"></i>
+                    <h3 class="text-white font-semibold mb-2">Cloud &amp; Infrastructure</h3>
+                    <p class="text-sm text-slate-500">AWS networking, compute, load balancing, databases and Infrastructure as Code.</p>
+                </div>
+                <div class="focus-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-chart-line text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">CI/CD Automation</h3>
+                    <p class="text-sm text-slate-500">Git, Jenkins and AWS CodePipeline, CodeBuild and CodeDeploy workflows.</p>
+                </div>
+                <div class="focus-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-eye text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Observability</h3>
+                    <p class="text-sm text-slate-500">Prometheus, Grafana, Loki, dashboards, metrics, logs and alerting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24 px-6 bg-slate-900/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="section-number text-xl">02.</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Technical Skills</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-cloud text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">AWS &amp; Cloud</h3>
+                    <p class="text-sm text-slate-500 leading-6">EC2, VPC, ALB, Auto Scaling, RDS, CloudWatch, SNS, SSM Parameter Store</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-brands fa-docker text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">Containers</h3>
+                    <p class="text-sm text-slate-500 leading-6">Docker, Docker Compose, Kubernetes</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-code text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">Infrastructure &amp; Automation</h3>
+                    <p class="text-sm text-slate-500 leading-6">Terraform, Ansible, Bash, Python</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-code-merge text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">CI/CD &amp; Version Control</h3>
+                    <p class="text-sm text-slate-500 leading-6">Git, GitHub, Jenkins, AWS CodePipeline, CodeBuild, CodeDeploy</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-chart-line text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">Observability</h3>
+                    <p class="text-sm text-slate-500 leading-6">Prometheus, Grafana, Loki, Grafana Alloy, Alertmanager, metrics and logs</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-terminal text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">Linux &amp; Systems</h3>
+                    <p class="text-sm text-slate-500 leading-6">Linux / Ubuntu, Nginx, PM2, server health checks, service monitoring</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-network-wired text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">Networking</h3>
+                    <p class="text-sm text-slate-500 leading-6">TCP/IP, DNS, HTTP/HTTPS, SSH</p>
+                </div>
+                <div class="skill-card p-6 glass rounded-2xl hover:border-indigo-500/50">
+                    <i class="fa-solid fa-terminal text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-white font-semibold mb-3">Development &amp; Data</h3>
+                    <p class="text-sm text-slate-500 leading-6">Java, JavaScript, Node.js, React, Express.js, MySQL, PostgreSQL, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+                <div class="flex items-center gap-4">
+                    <span class="section-number text-xl">03.</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Selected DevOps Projects</h2>
+                </div>
+                <p class="text-sm text-slate-500 max-w-xl">Selected hands-on projects across AWS, automation, CI/CD, containers and observability.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <article class="project-card group relative overflow-hidden rounded-3xl glass p-8 hover:border-indigo-500/50">
+                    <div class="flex justify-between items-start mb-7">
+                        <div class="p-3 bg-indigo-500/10 rounded-xl">
+                            <i class="fa-solid fa-network-wired text-indigo-400 text-2xl"></i>
+                        </div>
+                        <a href="https://github.com/Iftisam-sandik/Library-Management-System" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition" aria-label="View AWS Observability project on GitHub">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+
+                    <p class="code-font text-xs text-indigo-400 mb-3">AWS / AUTOMATION / OBSERVABILITY</p>
+                    <h3 class="text-2xl font-bold text-white mb-5">Production-Style AWS Observability Platform</h3>
+
+                    <div class="space-y-5 text-sm leading-7">
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Challenge</p>
+                            <p class="text-slate-400">Bring metrics, logs, availability checks and alerting together across a four-node AWS application environment.</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Solution</p>
+                            <p class="text-slate-400">Used Terraform and Ansible for Dockerized React/Node.js apps behind an ALB, dedicated MySQL, and Prometheus, Grafana and Loki monitoring.</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Verified Outcome</p>
+                            <p class="text-white font-semibold">Final validation: 11/11 healthy targets, zero Terraform drift and idempotent Ansible runs across all four servers.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-7 text-[10px] font-bold uppercase tracking-wider">
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">Terraform</span>
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">AWS</span>
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">Ansible</span>
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">Prometheus</span>
+                    </div>
+
+                    <a href="#observability-evidence" class="inline-flex items-center mt-7 text-sm font-semibold text-indigo-300 hover:text-white transition">
+                        View Project Evidence <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                    </a>
+                </article>
+
+                <article class="project-card group relative overflow-hidden rounded-3xl glass p-8 hover:border-cyan-500/50">
+                    <div class="flex justify-between items-start mb-7">
+                        <div class="p-3 bg-cyan-500/10 rounded-xl">
+                            <i class="fa-solid fa-bolt text-cyan-400 text-2xl"></i>
+                        </div>
+                        <a href="https://github.com/Iftisam-sandik/aws-3tier-autoscaling-cicd" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition" aria-label="View 3-Tier AWS Auto Scaling and CI/CD project on GitHub">
+                            <i class="fa-brands fa-github text-2xl"></i>
+                        </a>
+                    </div>
+
+                    <p class="code-font text-xs text-cyan-400 mb-3">AWS / AUTO SCALING / CI/CD</p>
+                    <h3 class="text-2xl font-bold text-white mb-5">Highly Available 3-Tier AWS Application with Auto Scaling &amp; CI/CD</h3>
+
+                    <div class="space-y-5 text-sm leading-7">
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Challenge</p>
+                            <p class="text-slate-400">Deploy an isolated three-tier AWS application with scaling, health checks and automated releases.</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Solution</p>
+                            <p class="text-slate-400">Connected a custom VPC, ALB, private EC2 Auto Scaling and RDS MySQL with CodePipeline, CodeBuild tests and CodeDeploy Blue/Green releases.</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Outcome</p>
+                            <p class="text-white font-semibold">Validated tier isolation, self-healing, automated delivery and health checks in a lab using Single-AZ RDS.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mt-7 text-[10px] font-bold uppercase tracking-wider">
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">AWS</span>
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">Auto Scaling</span>
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">CodePipeline</span>
+                        <span class="px-2.5 py-1.5 bg-slate-800 rounded">CodeDeploy</span>
+                    </div>
+
+                    <a href="#cicd-evidence" class="inline-flex items-center mt-7 text-sm font-semibold text-cyan-300 hover:text-white transition">
+                        View Project Evidence <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                    </a>
+                </article>
+            </div>
+
+            <div id="project-evidence" class="mt-14">
+                <div class="mb-8 max-w-3xl">
+                    <p class="code-font text-xs text-indigo-400 mb-3">IMPLEMENTATION EVIDENCE</p>
+                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Case Studies</h3>
+                </div>
+
+                <!-- Observability evidence -->
+                <details id="observability-evidence" class="production-evidence glass rounded-3xl overflow-hidden mb-8" open>
+                    <summary class="cursor-pointer px-6 md:px-8 py-6 flex items-center justify-between gap-4 hover:bg-white/[0.02] transition">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-indigo-500/10 rounded-xl"><i class="fa-solid fa-diagram-project text-indigo-400"></i></div>
+                            <div>
+                                <p class="code-font text-[11px] text-indigo-400 mb-1">CASE STUDY 01</p>
+                                <h4 class="text-xl font-bold text-white">AWS Monitoring &amp; Logs</h4>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down evidence-chevron text-slate-500"></i>
+                    </summary>
+
+                    <div class="px-6 md:px-8 pb-8 border-t border-white/5">
+                        <div class="pt-8">
+                            <div class="flex items-center justify-between gap-4 mb-5">
+                                <div>
+                                    <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Architecture</p>
+                                    <p class="text-sm text-slate-400">Exporters feed Prometheus; Alloy sends logs to Loki. Grafana displays both, while Prometheus routes alerts through Alertmanager.</p>
+                                </div>
+                                <span class="hidden md:inline-flex text-[10px] px-2.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">VERIFIED SCOPE</span>
+                            </div>
+
+                            <div class="evidence-grid-card rounded-2xl p-5 md:p-7 overflow-x-auto">
+                                <div class="flex items-center gap-3 min-w-[760px] justify-center code-font text-xs">
+                                    <div class="architecture-node"><i class="fa-solid fa-server text-lg mb-2 text-white"></i><br>Apps / Hosts</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-solid fa-code text-lg mb-2 text-indigo-300"></i><br>Exporters / Alloy</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-solid fa-database text-lg mb-2 text-amber-300"></i><br>Prometheus / Loki</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-solid fa-diagram-project text-lg mb-2 text-cyan-300"></i><br>Grafana</div>
+                                    <div class="text-slate-600 text-lg">+</div>
+                                    <div class="architecture-node"><i class="fa-solid fa-diagram-project text-lg mb-2 text-cyan-300"></i><br>Alertmanager</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-7">
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-brands fa-readme text-indigo-300"></i><h5 class="font-semibold text-white">Infrastructure</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">Terraform provisions the VPC, ALB and four EC2 servers: two Docker app hosts, a dedicated MySQL server and a monitoring server.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-rocket text-indigo-300"></i><h5 class="font-semibold text-white">Metrics</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">Prometheus collects host, Docker, backend and MySQL metrics through Node Exporter, cAdvisor, /metrics and mysqld_exporter. Blackbox probes the ALB.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-chart-line text-indigo-300"></i><h5 class="font-semibold text-white">Logs</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">Grafana Alloy forwards app-container logs, MySQL journal logs and monitoring-service logs to Loki. Log ingestion was verified from all four servers.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-shield-halved text-indigo-300"></i><h5 class="font-semibold text-white">Alerting</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">Prometheus evaluates host, backend, application and MySQL alerts. Alertmanager sends email; controlled tests confirmed firing and resolved notifications.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-users text-indigo-300"></i><h5 class="font-semibold text-white">Access / RBAC</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">Grafana folders separate application, infrastructure and database dashboards. Developers, Operations and QA use team-based View, Edit and Admin permissions.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-check-double text-indigo-300"></i><h5 class="font-semibold text-white">Automation / Verification</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">The final Terraform plan showed no drift. The integrated Ansible playbook reported changed=0 and failed=0 on all four servers; 11/11 targets were healthy.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-7 flex flex-wrap gap-3">
+                            <a href="https://github.com/Iftisam-sandik/Library-Management-System" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-xl text-sm font-semibold hover:bg-indigo-500 transition"><i class="fa-brands fa-github mr-2"></i> Repository</a>
+                            <a href="https://github.com/Iftisam-sandik/Library-Management-System/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-3 glass text-white rounded-xl text-sm font-semibold hover:bg-white/5 transition"><i class="fa-brands fa-readme mr-2"></i> README</a>
+                            <span class="inline-flex items-center px-4 py-3 text-xs text-slate-500"><i class="fa-solid fa-circle-info mr-2"></i>AWS deployment and observability added to an existing application fork.</span>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- CI/CD evidence -->
+                <details id="cicd-evidence" class="production-evidence glass rounded-3xl overflow-hidden">
+                    <summary class="cursor-pointer px-6 md:px-8 py-6 flex items-center justify-between gap-4 hover:bg-white/[0.02] transition">
+                        <div class="flex items-center gap-4">
+                            <div class="p-3 bg-cyan-500/10 rounded-xl"><i class="fa-solid fa-code-branch text-cyan-400"></i></div>
+                            <div>
+                                <p class="code-font text-[11px] text-cyan-400 mb-1">CASE STUDY 02</p>
+                                <h4 class="text-xl font-bold text-white">3-Tier AWS &amp; CI/CD</h4>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down evidence-chevron text-slate-500"></i>
+                    </summary>
+
+                    <div class="px-6 md:px-8 pb-8 border-t border-white/5">
+                        <div class="pt-8">
+                            <div class="flex items-center justify-between gap-4 mb-5">
+                                <div>
+                                    <p class="text-xs uppercase tracking-wider text-slate-500 font-bold mb-1">Architecture</p>
+                                    <p class="text-sm text-slate-400">Delivery targets the backend Auto Scaling environment. The ALB routes frontend and API traffic; the backend connects to private RDS MySQL.</p>
+                                </div>
+                                <span class="hidden md:inline-flex text-[10px] px-2.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">VERIFIED SCOPE</span>
+                            </div>
+
+                            <div class="evidence-grid-card rounded-2xl p-5 md:p-7 overflow-x-auto">
+                                <div class="flex items-center gap-3 min-w-[760px] justify-center code-font text-xs">
+                                    <div class="architecture-node"><i class="fa-brands fa-github text-lg mb-2 text-white"></i><br>GitHub</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-solid fa-code-branch text-lg mb-2 text-white"></i><br>CodePipeline</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-solid fa-gears text-lg mb-2 text-cyan-300"></i><br>CodeBuild</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-brands fa-aws text-lg mb-2 text-amber-300"></i><br>CodeDeploy</div>
+                                    <i class="fa-solid fa-arrow-right architecture-arrow"></i>
+                                    <div class="architecture-node"><i class="fa-solid fa-cubes text-lg mb-2 text-indigo-300"></i><br>EC2 Auto Scaling</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-7">
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-brands fa-readme text-cyan-300"></i><h5 class="font-semibold text-white">Architecture</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">A custom VPC spans two Availability Zones. An internet-facing ALB fronts private frontend/backend tiers and private RDS MySQL. The lab uses Single-AZ RDS.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-list-check text-cyan-300"></i><h5 class="font-semibold text-white">CI/CD</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">GitHub changes enter CodePipeline. CodeBuild runs npm ci and backend tests, then packages the backend, AppSpec and scripts for CodeDeploy.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-eye text-cyan-300"></i><h5 class="font-semibold text-white">Networking</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">ALB path rules separate frontend and API traffic. App instances have no public IPs; security-group references restrict access between the ALB, backend and database.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-user-shield text-cyan-300"></i><h5 class="font-semibold text-white">Security</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">The backend retrieves database credentials from SSM Parameter Store at startup. The password uses SecureString, and EC2 uses IAM roles instead of static AWS credentials.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-chart-line text-cyan-300"></i><h5 class="font-semibold text-white">Monitoring</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">CloudWatch tracks EC2, Auto Scaling, ALB and RDS health. CPU alarms drive backend scaling; operational alarms send email through SNS.</p>
+                            </div>
+                            <div class="evidence-grid-card rounded-2xl p-5">
+                                <div class="flex items-center gap-3 mb-3"><i class="fa-solid fa-list-check text-cyan-300"></i><h5 class="font-semibold text-white">Deployment Controls</h5></div>
+                                <p class="text-sm text-slate-500 leading-6">CodeDeploy Blue/Green validates the replacement before traffic cutover. AppSpec ValidateService checks backend health and a database-backed API; new ASG instances receive the latest revision.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-7 flex flex-wrap gap-3">
+                            <a href="https://github.com/Iftisam-sandik/aws-3tier-autoscaling-cicd" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-3 bg-cyan-600 text-white rounded-xl text-sm font-semibold hover:bg-cyan-500 transition"><i class="fa-brands fa-github mr-2"></i> Repository</a>
+                            <a href="https://github.com/Iftisam-sandik/aws-3tier-autoscaling-cicd/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-3 glass text-white rounded-xl text-sm font-semibold hover:bg-white/5 transition"><i class="fa-brands fa-readme mr-2"></i> README</a>
+                            <span class="inline-flex items-center px-4 py-3 text-xs text-slate-500"><i class="fa-solid fa-circle-info mr-2"></i>Portfolio lab with validated scaling and deployment workflows.</span>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Mindset -->
+    <section id="production" class="py-24 px-6 bg-slate-900/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-12">
+                <span class="section-number text-xl">04.</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">How I Think About Production</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+                <div class="focus-card glass rounded-2xl p-6 hover:border-indigo-500/50">
+                    <i class="fa-solid fa-heart-pulse text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Reliability</h3>
+                    <p class="text-sm text-slate-500 leading-6">Health checks, load balancing, Auto Scaling and service recovery.</p>
+                </div>
+                <div class="focus-card glass rounded-2xl p-6 hover:border-indigo-500/50">
+                    <i class="fa-solid fa-lock text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Security</h3>
+                    <p class="text-sm text-slate-500 leading-6">Security groups, tier isolation, Grafana RBAC and SSM secrets.</p>
+                </div>
+                <div class="focus-card glass rounded-2xl p-6 hover:border-indigo-500/50">
+                    <i class="fa-solid fa-eye text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Observability</h3>
+                    <p class="text-sm text-slate-500 leading-6">Metrics, logs, dashboards, exporters and email alerts.</p>
+                </div>
+                <div class="focus-card glass rounded-2xl p-6 hover:border-indigo-500/50">
+                    <i class="fa-solid fa-code-branch text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Automation</h3>
+                    <p class="text-sm text-slate-500 leading-6">Terraform, Ansible and CI/CD for repeatable deployments.</p>
+                </div>
+                <div class="focus-card glass rounded-2xl p-6 hover:border-indigo-500/50">
+                    <i class="fa-solid fa-terminal text-indigo-400 text-2xl mb-4"></i>
+                    <h3 class="text-white font-semibold mb-2">Operations</h3>
+                    <p class="text-sm text-slate-500 leading-6">Linux health checks, deployment troubleshooting and networking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recruiter / CTA -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto glass rounded-3xl p-8 md:p-12 text-center overflow-hidden relative">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+            <div class="relative">
+                <p class="code-font text-xs text-indigo-400 mb-3">BUILD • AUTOMATE • OBSERVE • IMPROVE</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">Build. Automate. Monitor.</h2>
+                <p class="text-slate-400 max-w-3xl mx-auto leading-8 mb-8">I use Linux, AWS, Infrastructure as Code, containers, CI/CD and observability to build repeatable environments and make systems easier to deploy, monitor and troubleshoot.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://github.com/Iftisam-sandik" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition">
+                        <i class="fa-brands fa-github mr-2"></i> GitHub
+                    </a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 glass text-white font-bold rounded-xl hover:bg-white/5 transition">
+                        <i class="fa-solid fa-file-arrow-down mr-2"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-20 border-t border-white/5 bg-slate-950/30">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <p class="code-font text-xs text-indigo-400 mb-3">AVAILABLE FOR THE RIGHT CHALLENGE</p>
+            <h2 class="text-3xl md:text-4xl font-bold gradient-text mb-4">Let’s Connect</h2>
+            <p class="text-slate-400 mb-8 max-w-2xl mx-auto leading-7">Based in Dhaka, Bangladesh. Open to Server Administrator and Junior DevOps / Cloud Engineer opportunities.</p>
+
+            <div class="flex justify-center space-x-6 text-2xl mb-8">
+                <a href="https://www.linkedin.com/in/iftisam-sandik-0490942b3/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-400 transition" aria-label="Ifti Sam Ibn Rahman on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Iftisam-sandik" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-400 transition" aria-label="Iftisam-sandik on GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:sandik55575@gmail.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-indigo-400 transition" aria-label="Email Ifti Sam Ibn Rahman at sandik55575@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+            <p class="text-sm text-slate-500">sandik55575@gmail.com • +8801521422433</p>
+            <p class="mt-12 text-xs text-slate-600 code-font">&copy; 2026 Ifti Sam Ibn Rahman. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
